@@ -51,4 +51,13 @@ ports:
     git clone https://github.com/Volotovskii/VirtualMachines.git
     ```
 
-Поменяйте пути в Homestead.yaml и зпустите проект. в host пропишите 192.168.10.42 application.local
+
+1.1 Если работаем без впн - в файле  `Homestead/Vagrantfile` добавить строку - ` ENV['VAGRANT_SERVER_URL'] = 'https://vagrant.elab.pro' `
+
+1.2 В файле `Homestead/scripts/homestead.rb` на 25 строке добавить - `     config.vm.box_version = "<= 10.1" `
+
+1.3 В файле `Homestead/bin/wsl-init` заменить `php8.3` на `php8.2`
+
+1.5 Переместите папку `code` в `Homestead` 
+
+1.6 Поменяйте пути в Homestead.yaml и зпустите проект. в host пропишите 192.168.10.42 application.local
