@@ -1,0 +1,25 @@
+ip: "192.168.10.42"
+memory: 2048
+cpus: 2
+provider: virtualbox
+name: PHP Backend
+
+sites:
+  - map: application.local
+    to: /home/vagrant/code/public
+    type: "laravel"
+    php: "8.2"
+    # assets: 
+    #   - C:\Users\User\Desktop\homestend\module_56\Homestead\application.local-cache.conf
+
+folders:
+  - map: C:\Users\User\Desktop\homestend\module_56\Homestead\code
+    to: /home/vagrant/code
+
+ports:
+  - send: 80
+    to: 80
+  - send: 2242
+    to: 22
+  - send: 4430
+    to: 443
